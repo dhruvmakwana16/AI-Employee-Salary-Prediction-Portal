@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AI Salary Predictor</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">
+            AI Salary Prediction Portal
+        </span>
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg p-4">
+
+        <h2 class="text-center mb-4">
+            Employee Salary Prediction
+        </h2>
+
+        <form action="/predict" method="POST">
+
+            <div class="mb-3">
+                <label>Experience</label>
+                <input type="number"
+                       class="form-control"
+                       name="experience"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label>Age</label>
+                <input type="number"
+                       class="form-control"
+                       name="age"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label>Education</label>
+
+                <select class="form-control"
+                        name="education">
+
+                    <option>Bachelor</option>
+                    <option>Master</option>
+                    <option>PhD</option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label>City</label>
+
+                <select class="form-control"
+                        name="city">
+
+                    <option>Ahmedabad</option>
+                    <option>Rajkot</option>
+                    <option>Surat</option>
+                    <option>Baroda</option>
+
+                </select>
+            </div>
+
+            <button class="btn btn-primary w-100">
+                Predict Salary
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="alert alert-success mt-4">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+        <a href="/dashboard"
+           class="btn btn-dark mt-3 w-100">
+
+           Open Analytics Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

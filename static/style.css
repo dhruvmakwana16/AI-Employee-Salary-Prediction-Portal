@@ -1,0 +1,96 @@
+/* Global styles */
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Card container */
+.card {
+  border-radius: 12px;
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Headings */
+.card h2 {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Form controls */
+.form-control {
+  background: #334155;
+  border: none;
+  border-radius: 8px;
+  color: #f1f5f9;
+  padding: 0.8rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  background: #475569;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5);
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.btn-dark {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.9rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: #0f172a;
+  transform: scale(1.05);
+}
+
+/* Alerts */
+.alert-success {
+  background: #22c55e;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+}
+.alert-danger {
+  background: #ef4444;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  text-align: center;
+}
